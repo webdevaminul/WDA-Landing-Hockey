@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tailwind with DaisyUI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Title of Website -->
+    <title>Hockey</title>
+    <!-- Custom CSS Styles -->
+    <style>
+      * {
+        font-family: "Manrope", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <header class="container mx-auto bg-slate-100">
+      <!-- Navbar Part  -->
+      <nav>
+        <div class="navbar text-[#424247]">
+          <!-- Nav Start  -->
+          <div class="navbar-start space-x-3">
+            <div class="dropdown lg:hidden">
+              <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h7"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li>
+                  <a href="#">Home</a>
+                </li>
+                <li>
+                  <a href="#">About</a>
+                </li>
+                <li>
+                  <a href="#">Pages</a>
+                </li>
+                <li>
+                  <a href="#">Blog</a>
+                </li>
+                <li>
+                  <a href="#">Contanct</a>
+                </li>
+              </ul>
+            </div>
+            <h1 class="text-2xl lg:text-4xl font-extrabold text-[#131318]">
+              Hockey
+            </h1>
+          </div>
+
+          <!-- Nav Center  -->
+          <div class="navbar-center hidden lg:block">
+            <ul class="flex gap-11">
+              <li>
+                <a class="text-red-500 font-bold" href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">Pages</a>
+              </li>
+              <li>
+                <a href="#">Blog</a>
+              </li>
+              <li>
+                <a href="#">Contanct</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Nav End  -->
+          <div class="navbar-end space-x-3">
+            <button class="btn btn-ghost btn-circle hidden lg:block">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 mx-auto"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </button>
+            <button
+              class="btn h-fit text-white text-lg lg:text-xl font-bold bg-red-500 hover:bg-red-600 border-none py-2 lg:py-4 px-4 lg:px-6"
+            >
+              Get Ticket
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container mx-auto">
+      <!-- Banner: Carousel Section -->
+      <section class="my-10">
+        <div class="carousel w-full">
+          <!-- Slide 1 -->
+          <div id="slide1" class="carousel-item relative w-full">
+            <img class="w-full rounded-2xl" src="Images/slide1.png" />
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide3" class="btn btn-circle">❮</a>
+              <a href="#slide2" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div id="slide2" class="carousel-item relative w-full">
+            <img class="w-full rounded-2xl" src="Images/slide2.png" />
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide1" class="btn btn-circle">❮</a>
+              <a href="#slide3" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div id="slide3" class="carousel-item relative w-full">
+            <img class="w-full rounded-2xl" src="Images/slide3.png" />
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide2" class="btn btn-circle">❮</a>
+              <a href="#slide1" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Professional Hockeys Club Section-->
+      <section class="my-10">
+        <!-- Hockeys Club Title -->
+        <div class="space-y-6 border-t-2 border-b-2 border-dashed py-6">
+          <h1
+            class="text-[#131318] text-center text-2xl lg:text-4xl font-extrabold"
+          >
+            Professional Hockeys Club
+          </h1>
+          <p
+            class="text-[#13131899] text-center font-medium max-w-[635px] mx-auto"
+          >
+            Dit amet consectetur. Condimentum dignissim adipiscing aliquam
+            turpis placerat dolor. Purus urna in sit nullam proin.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>
