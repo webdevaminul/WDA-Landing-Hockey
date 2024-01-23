@@ -29,6 +29,12 @@
       * {
         font-family: "Manrope", sans-serif;
       }
+      footer a:hover{
+        color: white;
+      }
+      .social-hover a:hover{
+        color: gray;
+      }
     </style>
   </head>
   <body class="bg-white">
@@ -57,7 +63,7 @@
               </div>
               <ul
                 tabindex="0"
-                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 text-white rounded-box w-52"
               >
                 <li>
                   <a href="#">Home</a>
@@ -290,7 +296,7 @@
               </p>
               <div class="">
                 <button
-                  class="btn text-xl text-white font-bold bg-red-500 border-none py-2 px-6"
+                  class="btn text-xl text-white font-bold bg-red-500 hover:bg-red-600 border-none py-2 px-6"
                 >
                   Register Now!
                 </button>
@@ -313,7 +319,7 @@
               </p>
               <div class="">
                 <button
-                  class="btn text-xl text-white font-bold bg-red-500 border-none py-2 px-6"
+                  class="btn text-xl text-white font-bold bg-red-500 hover:bg-red-600 border-none py-2 px-6"
                 >
                   Register Now!
                 </button>
@@ -336,7 +342,7 @@
               </p>
               <div class="">
                 <button
-                  class="btn text-xl text-white font-bold bg-red-500 border-none py-2 px-6"
+                  class="btn text-xl text-white font-bold bg-red-500 hover:bg-red-600 border-none py-2 px-6"
                 >
                   Register Now!
                 </button>
@@ -724,6 +730,7 @@
         </div>
       </section>
 
+      <!-- Get in Touch Section -->
       <section class="my-10">
         <!-- Get In Touch Title  -->
         <div class="space-y-6 border-t-2 border-b-2 border-dashed py-6">
@@ -744,14 +751,14 @@
         <div class="grid grid-cols-5 py-6 gap-6">
           <!-- Contact  -->
           <div
-            class="col-span-5 lg:col-span-2 grid gap-8 p-6 lg:p-10 border-2 border-gray-100 rounded-2xl"
+            class="col-span-5 lg:col-span-2 grid gap-8 p-5 lg:p-10 border-2 border-gray-100 rounded-2xl"
           >
             <!-- Phone Contact -->
             <div
-              class="bg-[#bced6d1a] px-8 py-12 flex flex-col gap-5 rounded-xl"
+              class="bg-[#bced6d1a] px-4 py-6 lg:px-8  lg:py-12 flex flex-col gap-5 rounded-xl"
             >
               <img class="w-12 h-12" src="Images/contact-call.png" alt="Call" />
-              <div>
+              <div class="flex flex-col">
                 <p class="text-[#13131899]">Phone Number:</p>
                 <p class="text-[#131318] text-lg font-extrabold">
                   (+62) 123-321-543
@@ -761,14 +768,14 @@
 
             <!-- Email Contact  -->
             <div
-              class="bg-[#fddd5f1a] px-8 py-12 flex flex-col gap-5 rounded-xl"
+              class="bg-[#fddd5f1a] px-4 py-6 lg:px-8  lg:py-12 flex flex-col gap-5 rounded-xl"
             >
               <img
                 class="w-12 h-12"
                 src="Images/contact-email.png"
                 alt="Email"
               />
-              <div>
+              <div class="flex flex-col">
                 <p class="text-[#13131899]">Email:</p>
                 <p class="text-[#131318] text-lg font-extrabold">
                   hockeys@support.com
@@ -778,14 +785,14 @@
 
             <!-- Location Contact -->
             <div
-              class="bg-[#629cf31a] px-8 py-12 flex flex-col gap-5 rounded-xl"
+              class="bg-[#629cf31a] px-4 py-6 lg:px-8  lg:py-12 flex flex-col gap-5 rounded-xl"
             >
               <img
                 class="w-12 h-12"
                 src="Images/contact-location.png"
                 alt="Location"
               />
-              <div>
+              <div class="flex flex-col">
                 <p class="text-[#13131899]">Location:</p>
                 <p class="text-[#131318] text-lg font-extrabold">
                   152/1 Mohakhali Wireless Gate
@@ -847,13 +854,13 @@
             </label>
 
             <!-- Button  -->
-            <butto class="col-span-2 bg-red-500 text-white text-xl text-center font-bold border-none rounded-xl py-4">Send Message</button>
+            <butto class="cursor-pointer col-span-2 bg-red-500 hover:bg-red-600 text-white text-xl text-center font-bold border-none rounded-xl py-4">Send Message</button>
           </div>
 
           <!-- Email -->
           <div class="bg-[#13131808] col-span-5 flex flex-col items-center justify-center gap-6 py-8">
             <h3 class="text-[#131318] text-2xl text-center font-extrabold">Social Media</h3>
-            <div class="text-[#131318] flex gap-5 text-lg">
+            <div class="text-[#131318] flex gap-5 text-lg social-hover">
               <a
                 title="Twitter"
                 href="https://twitter.com/?lang=en"
@@ -882,6 +889,59 @@
       </section>
     </main>
 
-    <footer></footer>
+
+    <footer class="bg-[#131318]">
+      <div class="container mx-auto grid grid-cols-4 py-6 lg:py-24 gap-4">
+        <!-- logo -->
+      <aside class="text-[#ffffff99] space-y-4 col-span-4 lg:col-span-1 grid justify-center">
+        <h2 class="text-3xl text-white font-extrabold text-center lg:text-left">Get In Touch</h2>
+        <p class="max-w-[346px] text-center lg:text-left">Dit amet consectetur. Condimentum  adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin. </p>
+        <div class="flex items-center gap-2 justify-center lg:justify-start">
+          <i class="fa-regular fa-envelope text-red-500"></i>
+          <p class="text-center lg:text-left">hockeys@support.com</p>
+        </div>
+        <div class="flex items-center gap-2 justify-center lg:justify-start">
+          <i class="fa-solid fa-phone text-red-500"></i>
+          <p class="text-center lg:text-left">(+62) 123-321-543</p>
+        </div>
+      </aside>
+
+      <!-- Company -->
+      <nav class="text-[#ffffff99] space-y-4 col-span-2 lg:col-span-1 grid justify-center">
+        <h2 class="text-lg text-white font-bold text-center lg:text-left">Company</h2>
+        <div class="flex flex-col gap-5 text-center lg:text-left">
+          <a href="#">About us</a>
+          <a href="#">Leadership</a>
+          <a href="#">Careers</a>
+          <a href="#">News & Article</a>
+          <a href="#">Legal Notice</a>
+        </div>
+      </nav>
+
+      <!-- Support -->
+      <nav class="text-[#ffffff99] col-span-2 lg:col-span-1 grid justify-center">
+        <h2 class="text-lg text-white font-bold text-center lg:text-left">Support</h2>
+        <div class="flex flex-col gap-5 text-center lg:text-left">
+          <a href="#">Help Center</a>
+          <a href="#">FAQ</a>
+          <a href="#">Ticket Support</a>
+          <a href="#">Contact Us</a>
+        </div>
+      </nav>
+
+      <!-- Service -->
+      <nav class="text-[#ffffff99] space-y-4 col-span-4 lg:col-span-1 grid justify-center">
+        <h2 class="text-lg text-white font-bold text-center lg:text-left">Services</h2>
+        <div class="flex flex-col gap-5 text-center lg:text-left">
+          <a href="#">Academi</a>
+          <a href="#">Group Lesson</a>
+          <a href="#">Private Lesson</a>
+          <a href="#">Hockeys for Kid</a>
+          <a href="#">Hockeys for Adult</a>
+        </div>
+      </nav>
+      </div>
+    </footer>
+
   </body>
 </html>
