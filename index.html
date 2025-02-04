@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A hockey club landing page built using HTML and Vanilla CSS."
+    />
+    <meta name="keywords" content="hockey, club, landing page" />
+    <meta name="author" content="webdevaminul" />
     <!-- Tailwind with DaisyUI -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css"
@@ -23,7 +29,8 @@
       crossorigin="anonymous"
     ></script>
     <!-- Title of Website -->
-    <title>Hockeys</title>
+    <title>WDA Hockeys</title>
+    <link rel="shortcut icon" href="/assets/logo.png" type="image/x-icon">
     <!-- Custom CSS Styles -->
     <style>
       * {
@@ -39,7 +46,7 @@
     <header class="container px-4 lg:px-0 mx-auto">
       <!-- Navbar Part  -->
       <nav>
-        <div class="navbar text-[#424247]">
+        <div class="navbar text-[#424247] px-0">
           <!-- Nav Start  -->
           <div class="navbar-start space-x-3">
             <div class="dropdown lg:hidden">
@@ -80,8 +87,8 @@
                 </li>
               </ul>
             </div>
-            <h1 class="text-2xl lg:text-4xl font-extrabold text-[#131318]">
-              Hockey<span class="text-red-500">'</span>s
+            <h1 class="text-xl lg:text-3xl font-extrabold text-nowrap text-[#131318] !-ml-2">
+             WDA Hockey
             </h1>
           </div>
 
@@ -125,7 +132,7 @@
               </svg>
             </button>
             <button
-              class="btn h-fit text-white text-lg lg:text-xl font-bold bg-red-500 hover:bg-red-600 border-none py-2 lg:py-4 px-4 lg:px-6"
+              class="btn h-fit text-white lg:text-lg font-bold bg-red-500 hover:bg-red-600 border-none py-2 lg:py-4 px-4 lg:px-6"
             >
               Get Ticket
             </button>
@@ -137,46 +144,42 @@
     <main class="container px-4 lg:px-0 mx-auto">
       <!-- Banner Section -->
       <section class="my-7 lg:mb-16 lg:mt-10 relative">
-        <!-- Banner Carousel  -->
+        <!-- Banner Carousel -->
         <div class="carousel w-full">
           <!-- Slide 1 -->
           <div id="slide1" class="carousel-item relative w-full">
-            <img class="w-full rounded-2xl" src="Images/slide1.png">
-            <div
-              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
-            >
-              <a href="#slide3" class="btn btn-circle">❮</a>
-              <a href="#slide2" class="btn btn-circle">❯</a>
+            <img loading="lazy" class="w-full rounded-2xl" src="assets/slide1.png" />
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <button onclick="changeSlide(3)" class="btn btn-circle">❮</button>
+              <button onclick="changeSlide(2)" class="btn btn-circle">❯</button>
             </div>
           </div>
-
+      
           <!-- Slide 2 -->
           <div id="slide2" class="carousel-item relative w-full">
-            <img class="w-full rounded-2xl" src="Images/slide2.png" />
-            <div
-              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
-            >
-              <a href="#slide1" class="btn btn-circle">❮</a>
-              <a href="#slide3" class="btn btn-circle">❯</a>
+            <img loading="lazy" class="w-full rounded-2xl" src="assets/slide2.png" />
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <button onclick="changeSlide(1)" class="btn btn-circle">❮</button>
+              <button onclick="changeSlide(3)" class="btn btn-circle">❯</button>
             </div>
           </div>
-
+      
           <!-- Slide 3 -->
           <div id="slide3" class="carousel-item relative w-full">
-            <img class="w-full rounded-2xl" src="Images/slide3.png" />
-            <div
-              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
-            >
-              <a href="#slide2" class="btn btn-circle">❮</a>
-              <a href="#slide1" class="btn btn-circle">❯</a>
+            <img loading="lazy" class="w-full rounded-2xl" src="assets/slide3.png" />
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <button onclick="changeSlide(2)" class="btn btn-circle">❮</button>
+              <button onclick="changeSlide(1)" class="btn btn-circle">❯</button>
             </div>
           </div>
         </div>
-
-        <!-- Carousel Badge  -->
+      
+        <!-- Carousel Badge -->
         <div class="bg-[#131318] p-4 lg:p-8 flex flex-col gap-2 lg:gap-4 rounded-xl lg:w-fit lg:absolute bottom-5 right-5">
           <h3 class="text-lg lg:text-2xl text-white font-extrabold">Meet all the heroes from the field</h3>
-          <p class="text-[#ffffff99] font-medium text-sm lg:text-base max-w-[500px]">Welcome all. Come and meet Coach Uradhura, Captain Jhon Dugdug, Captain Jhon Cena and many other legends of Hockey's world.</p>
+          <p class="text-[#ffffff99] font-medium text-sm lg:text-base max-w-[500px]">
+            Welcome all. Come and meet Coach Uradhura, Captain Jhon Dugdug, Captain Jhon Cena and many other legends of Hockey's world.
+          </p>
         </div>
       </section>
 
@@ -288,7 +291,7 @@
         <div class="grid gap-6 grid-cols-2 py-5 lg:py-11">
           <!-- Grid Program 1 -->
           <div
-            class="col-span-2 md:col-span-1 flex lg:min-h-[338px] p-10 bg-[#00000080] bg-[url('Images/program1.png')] bg-no-repeat bg-cover bg-center bg-blend-multiply rounded-xl shadow-xl"
+            class="col-span-2 md:col-span-1 flex lg:min-h-[338px] p-10 bg-[#00000080] bg-[url('assets/program1.png')] bg-no-repeat bg-cover bg-center bg-blend-multiply rounded-xl shadow-xl"
           >
             <div class="flex flex-col gap-3 justify-end">
               <h2 class="text-2xl text-white font-extrabold">Junior Program</h2>
@@ -307,7 +310,7 @@
 
           <!-- Grid Program 2 -->
           <div
-            class="col-span-2 md:col-span-1 flex lg:min-h-[338px] p-10 bg-[#00000080] bg-[url('Images/program2.png')] bg-no-repeat bg-cover bg-center bg-blend-multiply rounded-xl shadow-xl"
+            class="col-span-2 md:col-span-1 flex lg:min-h-[338px] p-10 bg-[#00000080] bg-[url('assets/program2.png')] bg-no-repeat bg-cover bg-center bg-blend-multiply rounded-xl shadow-xl"
           >
             <div class="flex flex-col gap-3 justify-end">
               <h2 class="text-2xl text-white font-extrabold">
@@ -328,7 +331,7 @@
 
           <!-- Grid Program 3 -->
           <div
-            class="col-span-2 flex lg:min-h-[450px] p-10 bg-[#00000080] bg-[url('Images/program3.png')] bg-no-repeat bg-cover bg-center bg-blend-multiply rounded-xl shadow-xl"
+            class="col-span-2 flex lg:min-h-[450px] p-10 bg-[#00000080] bg-[url('assets/program3.png')] bg-no-repeat bg-cover bg-center bg-blend-multiply rounded-xl shadow-xl"
           >
             <div class="flex flex-col gap-3 justify-end">
               <h2 class="text-2xl text-white font-extrabold">
@@ -373,9 +376,9 @@
           >
             <!-- Product Image  -->
             <div class="flex items-center justify-center rounded-xl">
-              <img
+              <img loading="lazy"
                 class="w-full rounded-xl"
-                src="Images/product1.png"
+                src="assets/product1.png"
                 alt="product1"
               />
             </div>
@@ -414,9 +417,9 @@
           >
             <!-- Product Image  -->
             <div class="flex items-center justify-center rounded-xl">
-              <img
+              <img loading="lazy"
                 class="w-full rounded-xl"
-                src="Images/product2.png"
+                src="assets/product2.png"
                 alt="product2"
               />
             </div>
@@ -455,9 +458,9 @@
           >
             <!-- Product Image  -->
             <div class="flex items-center justify-center rounded-xl">
-              <img
+              <img loading="lazy"
                 class="w-full rounded-xl"
-                src="Images/product3.png"
+                src="assets/product3.png"
                 alt="product3"
               />
             </div>
@@ -496,9 +499,9 @@
           >
             <!-- Product Image  -->
             <div class="flex items-center justify-center rounded-xl">
-              <img
+              <img loading="lazy"
                 class="w-full rounded-xl"
-                src="Images/product4.png"
+                src="assets/product4.png"
                 alt="product4"
               />
             </div>
@@ -537,9 +540,9 @@
           >
             <!-- Product Image  -->
             <div class="flex items-center justify-center rounded-xl">
-              <img
+              <img loading="lazy"
                 class="w-full rounded-xl"
-                src="Images/product5.png"
+                src="assets/product5.png"
                 alt="product5"
               />
             </div>
@@ -578,9 +581,9 @@
           >
             <!-- Product Image  -->
             <div class="flex items-center justify-center rounded-xl">
-              <img
+              <img loading="lazy"
                 class="w-full rounded-xl"
-                src="Images/product6.png"
+                src="assets/product6.png"
                 alt="product6"
               />
             </div>
@@ -636,9 +639,9 @@
         <div class="grid grid-cols-12 border-2 border-gray-100 rounded-2xl gap-6 md:gap-0 lg:gap-6 p-3 md:p-2 lg:p-6">
           <!-- Accordion Image -->
           <div class="col-span-12 md:col-span-6 lg:col-span-5 flex items-center justify-center">
-            <img
+            <img loading="lazy"
             class="w-full object-cover"
-            src="Images/question.png"
+            src="assets/question.png"
             alt="question"
           />
           </div>
@@ -744,7 +747,7 @@
             <div
               class="bg-[#bced6d1a] px-4 py-6 lg:px-8  lg:py-12 flex flex-col gap-5 rounded-xl"
             >
-              <img class="w-12 h-12" src="Images/contact-call.png" alt="Call" />
+              <img loading="lazy" class="w-12 h-12" src="assets/contact-call.png" alt="Call" />
               <div class="flex flex-col">
                 <p class="text-[#13131899]">Phone Number:</p>
                 <p class="text-[#131318] text-lg font-extrabold">
@@ -757,9 +760,9 @@
             <div
               class="bg-[#fddd5f1a] px-4 py-6 lg:px-8  lg:py-12 flex flex-col gap-5 rounded-xl"
             >
-              <img
+              <img loading="lazy"
                 class="w-12 h-12"
-                src="Images/contact-email.png"
+                src="assets/contact-email.png"
                 alt="Email"
               />
               <div class="flex flex-col">
@@ -774,9 +777,9 @@
             <div
               class="bg-[#629cf31a] px-4 py-6 lg:px-8  lg:py-12 flex flex-col gap-5 rounded-xl"
             >
-              <img
+              <img loading="lazy"
                 class="w-12 h-12"
-                src="Images/contact-location.png"
+                src="assets/contact-location.png"
                 alt="Location"
               />
               <div class="flex flex-col">
@@ -929,5 +932,10 @@
       </div>
     </footer>
 
+    <script>
+      function changeSlide(slideNumber) {
+        document.querySelector(`#slide${slideNumber}`).scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }
+    </script>
   </body>
 </html>
